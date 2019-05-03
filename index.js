@@ -17,15 +17,15 @@ function countDown()
 
 
  var user_date=user_month+"/"+user_day+"/"+user_year+" "+user_hour+":"+user_min;
- var end = new Date(user_date); // Arrange values in Date Time Format
- var second = 1000; // Total Millisecond In One Sec
- var minute = second * 60; // Total Sec In One Min
- var hour = minute * 60; // Total Min In One Hour
- var day = hour * 24; // Total Hour In One Day
+ var end = new Date(user_date); 
+ var second = 1000;
+ var minute = second * 60;
+ var hour = minute * 60; 
+ var day = hour * 24; 
 
  function display() {
   var current = new Date();
-  var diff = end - current; // Get The Difference Between Current and entered date time
+  var diff = end - current; 
 
    if(diff <=0) 
  {
@@ -34,10 +34,10 @@ function countDown()
   return;
  }
 
-  var days = Math.floor(diff / day); // Get Remaining Days
-  var hours = Math.floor((diff % day) / hour); // Get Remaining Hours
-  var minutes = Math.floor((diff % hour) / minute); // Get Remaining Min
-  var seconds = Math.floor((diff % minute) / second); // Get Remaining Sec
+  var days = Math.floor(diff / day); 
+  var hours = Math.floor((diff % day) / hour); 
+  var minutes = Math.floor((diff % hour) / minute); 
+  var seconds = Math.floor((diff % minute) / second);
  
   document.getElementById("count").innerHTML = days + 'Days ';
   document.getElementById("count").innerHTML += hours + 'Hrs ';
